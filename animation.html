@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            width: 150px;
+            height: 100px;
+            background-color: red;
+            animation-name: a666;
+            animation-duration: 6s;
+            /*animation-delay: 1s;*/
+            animation-timing-function: linear;
+            /*animation-iteration-count: 3;*/
+            /*animation-direction: alternate;*/
+            position: absolute;
+            /*overflow: hidden;*/
+        }
+        @keyframes a666 {
+             /*from{*/
+             /*margin-left: 0px;*/
+             /*}*/
+             /*to{*/
+             /*margin-left: 600px;*/
+             /*}*/
+             0%{
+                 margin-left: 0;
+                 margin-top: 0;
+             }
+             25%{
+                 margin-left: 100px;
+                 margin-top: 0;
+             }
+             50%{
+                 margin-left: 100px;
+                 margin-top: 500px;
+             }
+             75%{
+                 margin-left: 0;
+                 margin-top: 500px;
+             }
+            100%{
+                margin: 0;
+            }
+         }
+        .box1:hover{
+            animation-play-state: paused;
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            top: 200px;
+            left: 50%;
+            margin-left: -100px;
+            position: absolute;
+            animation-name: b66;
+            animation-duration: 3s;
+            animation-fill-mode: both;
+            animation-delay: 3s;
+        }
+        @keyframes b66 {
+            0%{
+                transform: rotate(20deg);
+            }
+            25%{
+                transform: rotate(40deg);
+            }
+            75%{
+                transform: rotate(60deg);
+            }
+            100%{
+                transform: rotate(70deg);
+            }
+        }
+        </style>
+
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>
